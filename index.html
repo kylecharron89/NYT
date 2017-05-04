@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NYT News Feed</title>
+    <!--  default viewport -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/nyt-logo.svg">
+    <!-- Main jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Load fontawesome js -->
+    <script src="https://use.fontawesome.com/d4092edb27.js"></script>
+    <!-- import NYT JS -->
+    <script src="nyt.js"></script>
+    <!-- Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="dist/min.style.css">
+  </head>
+  <body class="black-background">
+    <!-- NYT Logo & section selector -->
+    <div class="flex justify-center align-items-center flex-direction-column desktop-header">
+      <img class="margin-all" src="assets/images/nyt-logo.svg">
+
+
+      <select class="margin-all dropdown dropbtn" id="select" onchange="changeSection(this.value)">
+        <option class="dropdown-content">Section</option>
+      </select>
+      <p class="margin-all"><span id="numArticles"></span></p>
+    </div>
+    <!-- Article results -->
+    <section class="flex flex-flow-wrap justify-center" id="nytArticles">
+      <a class="flex flex-direction-column background-image article justify-flex-end" id="articleTemplate">
+        <h2 class="grey-background padding-top" data-title=""></h2>
+        <p class="grey-background padding-bottom" data-abstract="" href></p>
+      </a>
+    </section>
+
+
+    <footer class="footer">
+      <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2017 Kyle Charron</p>
+    </footer>
+
+  </body>
+</html>

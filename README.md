@@ -1,2 +1,1 @@
-# NYT
-New York Times
+# ra-project02
